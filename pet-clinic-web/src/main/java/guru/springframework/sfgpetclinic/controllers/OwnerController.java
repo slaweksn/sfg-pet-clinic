@@ -1,6 +1,5 @@
 package guru.springframework.sfgpetclinic.controllers;
 
-import java.util.Collection;
 import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Controller;
