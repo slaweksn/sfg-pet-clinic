@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 
 @Controller
-@RequestMapping(path = "owners")
+@RequestMapping(path = {"owners", "owners/"})
 public class OwnerController {
 
 	private final OwnerService ownerService;
@@ -20,7 +20,7 @@ public class OwnerController {
 		this.ownerService = ownerService;
 	}
 	
-	@GetMapping(path = { "", "/", "/index" })
+	@GetMapping(path = { "index", "index/"})
 	public String listOwners(Model model) {
 
 		model.addAttribute("owners", ownerService.findAll().stream().sorted((o1,o2)->o1.getId().compareTo(o2.getId())).collect(Collectors.toList()));
