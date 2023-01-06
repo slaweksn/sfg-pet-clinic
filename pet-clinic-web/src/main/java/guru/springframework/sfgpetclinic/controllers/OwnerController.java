@@ -20,7 +20,7 @@ public class OwnerController {
 		this.ownerService = ownerService;
 	}
 	
-	@GetMapping(path = { "index", "index/"})
+	@GetMapping(path = {"", "index", "index/"})
 	public String listOwners(Model model) {
 
 		model.addAttribute("owners", ownerService.findAll().stream().sorted((o1,o2)->o1.getId().compareTo(o2.getId())).collect(Collectors.toList()));
