@@ -14,4 +14,10 @@ public class IndexController {
 
 		return "index";
 	}
+	
+	@GetMapping(path = {"oups", "oups/"})
+	public String oups() {
+		
+		return "notimplemented";
+	}
 }
