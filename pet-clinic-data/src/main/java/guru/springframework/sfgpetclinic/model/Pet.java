@@ -46,4 +46,9 @@ public class Pet extends BaseEntity {
 		this.birthDate = birthDate;
 	}
 
+	@Override
+	public String toString() {
+		return "Pet [name=" + name + ", petType=" + petType + ", birthDate=" + birthDate + "]";
+	}
+
 }

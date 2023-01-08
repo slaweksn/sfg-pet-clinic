@@ -50,4 +50,10 @@ public class Owner extends Person {
 		this.pets = pets;
 	}
 
+	@Override
+	public String toString() {
+		return "Owner [address=" + address + ", city=" + city + ", telephone=" + telephone + ", pets=" + pets
+				+ ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName() + ", getId()=" + getId()
+				+ "]";
+	}
 }
