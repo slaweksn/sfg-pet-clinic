@@ -11,7 +11,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Entity
 @Table(name = "pets")
 public class Pet extends BaseEntity {
@@ -37,7 +47,7 @@ public class Pet extends BaseEntity {
 
 	@OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
 	private Set<Visit> visits = new HashSet<>();
-	
+	/*
 	public String getName() {
 		return name;
 	}
@@ -77,7 +87,7 @@ public class Pet extends BaseEntity {
 	public void setVisits(Set<Visit> visits) {
 		this.visits = visits;
 	}
-
+	*/
 	@Override
 	public String toString() {
 		return "Pet [name=" + name + ", petType=" + petType + ", birthDate=" + birthDate + "]";

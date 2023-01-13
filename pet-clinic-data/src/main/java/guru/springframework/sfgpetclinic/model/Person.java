@@ -1,9 +1,19 @@
 package guru.springframework.sfgpetclinic.model;
 
+//import java.util.Set;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.validation.constraints.NotEmpty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+//@AllArgsConstructor
 @MappedSuperclass
 public class Person extends BaseEntity {
 
@@ -18,7 +28,12 @@ public class Person extends BaseEntity {
 	
 	@Column(name = "last_name")
 	private String lastName;
-
+	
+	public Person(Long id, String firstName, String lastName) {
+		super(id);
+	}
+	
+	/*-
 	public String getFirstName() {
 		return firstName;
 	}
@@ -34,5 +49,5 @@ public class Person extends BaseEntity {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-
+	*/
 }

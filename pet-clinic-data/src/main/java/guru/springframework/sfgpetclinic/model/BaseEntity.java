@@ -2,6 +2,7 @@ package guru.springframework.sfgpetclinic.model;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Set;
 
 import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
@@ -13,7 +14,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 
@@ -42,13 +51,13 @@ public abstract class BaseEntity implements Serializable {
 	//@Column(name = "last_modified_date")
 	//private Instant lastModifiedDate = Instant.now();
 	
-	public Long getId() {
-		return id;
-	}
+	//public Long getId() {
+	//	return id;
+	//}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+	//public void setId(Long id) {
+	//	this.id = id;
+	//}
 	/*-
 	
 	public String getCreatedBy() {
