@@ -8,4 +8,5 @@ import guru.springframework.sfgpetclinic.model.Owner;
 @Repository
 public interface OwnerRepository extends CrudRepository<Owner, Long> {
 
+	Owner findByLastName(String lastName);
 }

@@ -22,15 +22,18 @@ public class Owner extends Person {
 	private String address;
 	
 	@Column(name="city")
-	private String city;public Owner() {
-		// TODO Auto-generated constructor stub
-	}
+	private String city;
+	
 	@Column(name="telephone")
 	private String telephone;
 	
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
 	private Set<Pet> pets = new HashSet<>();
 
+	public Owner() {
+		super();
+	}
+	
 	public String getAddress() {
 		return address;
 	}
