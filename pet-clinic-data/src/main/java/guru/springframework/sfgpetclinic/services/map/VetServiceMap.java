@@ -12,7 +12,7 @@ import guru.springframework.sfgpetclinic.services.VetService;
 
 @Service
 @Profile({"default", "map"})
-public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
+public class VetServiceMap extends AbstractServiceMap<Vet, Long> implements VetService {
 	
 	private final SpecialityService specialityService;
 	

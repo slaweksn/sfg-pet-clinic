@@ -10,7 +10,7 @@ import guru.springframework.sfgpetclinic.services.PetService;
 
 @Service
 @Profile({"default", "map"})
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
+public class PetServiceMap extends AbstractServiceMap<Pet, Long> implements PetService {
 
 	@Override
 	public Set<Pet> findAll() {
