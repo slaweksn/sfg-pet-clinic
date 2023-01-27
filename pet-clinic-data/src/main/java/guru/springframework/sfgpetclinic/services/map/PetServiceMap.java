@@ -44,7 +44,7 @@ public class PetServiceMap extends AbstractServiceMap<Pet, Long> implements PetS
 
 	@Override
 	public Pet findByName(String name) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
